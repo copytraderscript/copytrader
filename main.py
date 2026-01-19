@@ -1,4 +1,4 @@
-# Python copy-trading script for use in e.g. Pipedream, to copy Futures positions between Kraken acounts.
+# Python copy-trading script to copy Futures positions between Kraken acounts.
 
 # This code contains 2 sections. 
 # Section 1 falls under the MTI License and Crypto Facilities copyright notice as stated in Section 1.
