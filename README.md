@@ -9,10 +9,10 @@ Python copy-trading script to copy Futures positions between Kraken acounts.
 5. Test via "Run workflow"
 
 ## Required secrets
-- SOURCE_KRAKEN_FUTURES_KEY
-- SOURCE_KRAKEN_FUTURES_SECRET
-- YOUR_KRAKEN_FUTURES_KEY
-- YOUR_KRAKEN_FUTURES_SECRET
+- KRAKEN_SOURCE_KEY
+- KRAKEN_SOURCE_SECRET
+- KRAKEN_YOUR_KEY
+- KRAKEN_YOUR_SECRET
 
 Add these in: Settings > Secrets and variables > Actions > New repository secret
 
