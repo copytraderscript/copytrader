@@ -30,11 +30,11 @@ jobs:
       - name: Run main script
         env:
           # Users set these in: Settings -> Secrets and variables -> Actions
-          SOURCE_KRAKEN_FUTURES_KEY: ${{ secrets.SOURCE_KRAKEN_FUTURES_KEY }}
-          SOURCE_KRAKEN_FUTURES_SECRET: ${{ secrets.SOURCE_KRAKEN_FUTURES_SECRET }}
+          KRAKEN_SOURCE_KEY: ${{ secrets.KRAKEN_SOURCE_KEY }}
+          KRAKEN_SOURCE_SECRET: ${{ secrets.KRAKEN_SOURCE_SECRET }}
       
-          YOUR_KRAKEN_FUTURES_KEY: ${{ secrets.YOUR_KRAKEN_FUTURES_KEY }}
-          YOUR_KRAKEN_FUTURES_SECRET: ${{ secrets.YOUR_KRAKEN_FUTURES_SECRET }}
+          KRAKEN_YOUR_KEY: ${{ secrets.KRAKEN_YOUR_KEY }}
+          KRAKEN_YOUR_SECRET: ${{ secrets.KRAKEN_YOUR_SECRET }}
         run: |
           python main.py
           
