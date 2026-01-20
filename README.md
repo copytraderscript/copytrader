@@ -19,6 +19,7 @@ Add these in: Settings > Secrets and variables > Actions > New repository secret
 ## Scheduling
 - Default: every 10 minutes
 - Change in `.github/workflows/run.yml`
+- For more reliable scheduled runs, we recommend using cron-job.org to trigger the workflow. It is free, reliable, and supports custom HTTP headers.
 
 ## Enable Actions
 Enable Actions at repository level:
