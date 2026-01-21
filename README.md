@@ -68,7 +68,10 @@ Basic settings
 - Replace:
 - `<OWNER>` with your GitHub username
 - `<REPO>` with your repository name
-- Execute: every 5 minutes
+- Execute: every 5 or 10 minutes.
+
+Do NOT use schedules < 5 minutes, because you will deplete your free quota on GitHub (2000 min/month, and each run takes 10-15 sec, running every 5 min = 8928 runs in a long month = 1488-2232 min/months usage). So 5 min is doable but risks failure at the end of a month, and 10 min is safer.
+
 Advanced settings
 - Headers:
   - Accept: application/vnd.github+json
