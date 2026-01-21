@@ -2,9 +2,6 @@ name: Run script
 
 on:
   workflow_dispatch: {}
-  schedule:
-    # Every 10 minutes (edit as needed). Minimum supported is every 5 minutes.
-    - cron: "8-59/10 * * * *"
 
 permissions:
   contents: read
