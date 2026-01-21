@@ -1,0 +1,37 @@
+name: Run (external trigger)
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+concurrency:
+  group: run-script
+  cancel-in-progress: true
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run main script
+        env:
+          # Users set these in: Settings -> Secrets and variables -> Actions
+          KRAKEN_SOURCE_KEY: ${{ secrets.KRAKEN_SOURCE_KEY }}
+          KRAKEN_SOURCE_SECRET: ${{ secrets.KRAKEN_SOURCE_SECRET }}
+      
+          KRAKEN_YOUR_KEY: ${{ secrets.KRAKEN_YOUR_KEY }}
+          KRAKEN_YOUR_SECRET: ${{ secrets.KRAKEN_YOUR_SECRET }}
+        run: |
+          python main.py
+          
